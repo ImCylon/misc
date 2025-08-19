@@ -1,4 +1,4 @@
-# Common-Aliases
+# NOTE: Common-Aliases
 alias cd='z'
 alias chrome='devour google-chrome-stable'
 alias cp='\cp -rfv'
@@ -16,37 +16,43 @@ alias r.='yazi .'
 alias rm='\rm -rfv'
 alias r~='yazi ~/'
 
-# Editor
+# NOTE: Editor
 alias n='nvim'
-alias rcabrev='nvim ~/.dotfiles/nvim/lua/abrev.lua'
-alias rcalacritty='nvim ~/.dotfiles/alacritty/alacritty.toml'
-alias rchyprland='cd ~/.config/hypr && nvim .'
-alias rcwaybar='cd ~/.config/waybar && nvim .'
-alias rcdunst='cd ~/.config/dunst && nvim .'
-alias rcalias='nvim ~/.dotfiles/misc/aliases'
-alias rcawesome='nvim ~/.dotfiles/awesome/rc.lua'
-alias rcbspwm='nvim ~/.dotfiles/bspwm/bspwmrc'
-alias rcemerge='sudo nvim /etc/portage/'
-alias rckitty='nvim ~/.dotfiles/kitty/kitty.conf'
-alias rcmake='sudo nvim /etc/portage/make.conf'
-alias rcnvim='cd ~/.config/nvim/ && nvim lua'
-alias rcpicom='nvim ~/.dotfiles/picom/picom.conf'
-alias rcpolybar='nvim ~/.dotfiles/polybar/imcylon'
-alias rcportage='sudo nvim /etc/portage/'
-# alias rcranger='nvim ~/.config/ranger/rc.conf'
-alias rcspaceship='nvim ~/.dotfiles/misc/spaceship.zsh '
-alias rcsxhkd='nvim ~/.dotfiles/sxhkd/sxhkdrc'
-alias rctmux='nvim ~/.dotfiles/tmux/tmux.conf'
-alias rcvimwiki='nvim ~/Documents/vimwiki/index.md'
-alias rczsh='nvim ~/.zshrc'
 alias vim='nvim'
+alias rcalacritty='(cd ~/.dotfiles/alacritty/ && nvim alacritty.toml) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rcaliases='(cd ~/.dotfiles/misc/ && nvim aliases) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rcdunst='(cd ~/.dotfiles/dunst/ && nvim dunstrc) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rceww='(cd ~/.dotfiles/eww/ && nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rchyprland='(cd ~/.dotfiles/hypr/ && nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rclsd='(cd ~/.dotfiles/lsd/ && nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rcmake='(cd /etc/portage/ && sudo nvim make.conf) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rcmatugen='(cd ~/.dotfiles/matugen/ && nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rcnvim='(cd ~/.dotfiles/nvim/lua/ && nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rcportage='(cd /etc/portage/ && sudo nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rcripgrep='(cd ~/.dotfiles/ripgrep/ && nvim ripgrep.conf) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rcswaylock='(cd ~/.dotfiles/swaylock/ && nvim config) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rcswaync='(cd ~/.dotfiles/swaync/ && nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rcsystemd='(cd ~/.dotfiles/systemd/user/ && nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rctex='(cd ~/.dotfiles/tex/ && nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rctmux='(cd ~/.dotfiles/tmux/ && nvim tmux.conf) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rctofi='(cd ~/.dotfiles/tofi/ && nvim config) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rcwaybar='(cd ~/.dotfiles/waybar/ && nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rcyazi='(cd ~/.dotfiles/yazi/ && nvim openers.toml) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rczathura='(cd ~/.dotfiles/zathura/ && nvim zathurarc) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rczsh='(cd ~/.dotfiles/zsh/ && nvim zshrc) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+# alias rcabrev='nvim ~/.dotfiles/nvim/lua/abrev.lua'
+# alias rcawesome='nvim ~/.dotfiles/awesome/rc.lua'
+# alias rcbspwm='nvim ~/.dotfiles/bspwm/bspwmrc'
+# alias rckitty='nvim ~/.dotfiles/kitty/kitty.conf'
+# alias rcpicom='nvim ~/.dotfiles/picom/picom.conf'
+# alias rcpolybar='nvim ~/.dotfiles/polybar/imcylon'
+# alias rcranger='nvim ~/.config/ranger/rc.conf'
+# alias rcspaceship='nvim ~/.dotfiles/misc/spaceship.zsh '
+# alias rcsxhkd='nvim ~/.dotfiles/sxhkd/sxhkdrc'
+# alias rcvimwiki='nvim ~/Documents/vimwiki/index.md'
 # alias vw='cd ~/Documents/vimwiki && nvim .' 
 
-# Git
-alias gemma='ollama run gemma'
-alias code='ollama run codellama:7b'
-
-# Git
+# NOTE: Git
 alias gc='git commit -S -v'
 alias gcd='git checkout devel'
 alias gci='git checkout issues'
@@ -54,7 +60,7 @@ alias glo='git log'
 alias gp='git push -u origin main'
 alias grh='git reset HEAD~1'
 
-# Systems and applications
+# NOTE: Systems and applications
 alias cat='bat'
 alias cheat='curl cht.sh/'
 alias fr='find | rg '
@@ -81,7 +87,7 @@ alias youtube-dl-audio='youtube-dl --ignore-errors --output "%(title)s.%(ext)s" 
 alias youtube-dl-video='youtube-dl --write-sub --sub-lang pt-BR -f "bestvideo[height<=1080]+bestaudio/best[height<=720]" -o "$HOME/.youtube-dl/%(title)s.%(ext)s"'
 alias youtube-dl-playlist='youtube-dl --write-sub --sub-lang pt-BR -f "bestvideo[height<=1080]+bestaudio/best[height<=720]" -o "~/.youtube-dl/ %(playlist_index)s - %(title)s.%(ext)s" -i --yes-playlist '
 
-# Directories
+# NOTE: Directories
 alias 42='/home/projects/project-42'
 alias cdi1='cd /home/projects/SciIzi/mathematics/1_periodo/calculo_i/tex && nvim main.tex'
 alias cfg='~/.config'
@@ -104,8 +110,7 @@ alias sidart='/home/projects/SciIzi/comsci/langs/dart'
 alias sim='/home/projects/SciIzi/mathematics'
 alias sip='/home/projects/SciIzi/physics'
 
-# Arch Linux
-# Pacaur
+# NOTE:  Arch Linux - Pacaur
 if (( $+commands[pacaur] )); then
   #alias parep='pacaur -Si'
   #alias pasu='pacaur -Syu --noconfirm'
@@ -124,9 +129,8 @@ if (( $+commands[pacaur] )); then
   alias paupg='pacaur --noedit -Syyu --noconfirm'
 fi
 
+# NOTE: Gentoo - Emerge
 if (( $+commands[emerge] )); then
-# Gentoo
-# Emerge
 alias e1='emerge -av1'
 alias easkclean='emerge --ask --depclean'
 alias ec='emerge -c'
