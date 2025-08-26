@@ -13,7 +13,7 @@ alias mv='\mv -ivf'
 alias q='exit'
 alias r='yazi'
 alias r.='yazi .'
-alias rm='\rm -rfv'
+alias rm='trash'
 alias r~='yazi ~/'
 
 # NOTE: Editor
@@ -29,6 +29,7 @@ alias rcmake='(cd /etc/portage/ && sudo nvim make.conf) || echo "Erro: Verifique
 alias rcmatugen='(cd ~/.dotfiles/matugen/ && nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
 alias rcnvim='(cd ~/.dotfiles/nvim/lua/ && nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
 alias rcportage='(cd /etc/portage/ && sudo nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
+alias rcscripts='(cd ~/.dotfiles/scripts && nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
 alias rcripgrep='(cd ~/.dotfiles/ripgrep/ && nvim ripgrep.conf) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
 alias rcswaylock='(cd ~/.dotfiles/swaylock/ && nvim config) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
 alias rcswaync='(cd ~/.dotfiles/swaync/ && nvim .) || echo "Erro: Verifique ~/.dotfiles/misc/aliases"'
