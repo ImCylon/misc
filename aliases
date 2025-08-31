@@ -1,6 +1,5 @@
 # NOTE: Common-Aliases
 alias cd='z'
-alias chrome='devour google-chrome-stable'
 alias cp='\cp -rfv'
 alias fd='fd'
 alias google-chrome='devour google-chrome-stable'
@@ -14,6 +13,7 @@ alias q='exit'
 alias r='yazi'
 alias r.='yazi .'
 alias rm='trash'
+alias rmm='\rm -rfv'
 alias r~='yazi ~/'
 
 # NOTE: Editor
